@@ -6,16 +6,13 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Getter @Setter
-public class Account {
+@Setter @Getter
+public class User {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true)
-    private String username;
-
-    private String password;
-
+    @Column
+    private String name;
+    @Column(unique=true)  //email 중복 허용x
     private String email;
-
 }
