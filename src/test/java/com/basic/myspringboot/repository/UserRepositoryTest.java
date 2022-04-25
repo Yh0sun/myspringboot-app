@@ -26,7 +26,7 @@ public class UserRepositoryTest {
         System.out.println("email :  "+ saved.getEmail());
     }
 
-    @Test
+    @Test @Disabled
     public void finder() throws  Exception {
         //있든 없든 체크 x
         Optional<User> optional = userRepository.findByEmail("yhs1@n.com");
@@ -45,6 +45,6 @@ public class UserRepositoryTest {
         //null 값 나오는게 싫으면 Account 생성자 함수 만들어주기 new Account("")
 
         //null 이면 not found 404 오류
-        User u4 = userRepository.findByEmail("yhs3@n.com").orElseThrow(() ->new RuntimeException("User Not Found"));
+     //   User u4 = userRepository.findByEmail("yhs3@n.com").orElseThrow(() ->new RuntimeException("User Not Found"));
     }
 }

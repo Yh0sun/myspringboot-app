@@ -28,7 +28,7 @@ public class AccountRepositoryTest {
         System.out.println("username "+ savedAccount.getUsername());
     }
 
-    @Test
+    @Test @Disabled
     public void finder() throws  Exception {
         //있든 없든 체크 x
         Optional<Account> optional = accountRepository.findById(1L);
@@ -47,7 +47,7 @@ public class AccountRepositoryTest {
         //null 값 나오는게 싫으면 Account 생성자 함수 만들어주기 new Account("")
 
         //null 이면 not found 404 오류
-        Account acct3 = accountRepository.findById(3L).orElseThrow(() ->new RuntimeException("Account Not Found"));
+     //   Account acct3 = accountRepository.findById(3L).orElseThrow(() ->new RuntimeException("Account Not Found"));
 
     }
 
