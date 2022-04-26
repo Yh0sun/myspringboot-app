@@ -13,7 +13,7 @@ import java.util.function.Consumer;
 
 public class LamdaTest {
 
-    @Test
+    @Test @Disabled
     public void iterable(){
         List<User> users=Arrays.asList(new User("hs1",100), new User("hs2",200),new User("hs3",300));
         for(User user:users){
