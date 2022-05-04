@@ -13,6 +13,7 @@ public class User {
 
     @Column
     private String name;
+
     @Column(unique=true)  //email 중복 허용x
     private String email;
 }
